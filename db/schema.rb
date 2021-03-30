@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2021_03_30_041020) do
     t.string "errorSeverity"
     t.string "errorCategory"
     t.string "errorMessage"
+    t.string "longMessage"
     t.bigint "errorTime"
     t.boolean "selected"
     t.boolean "new"

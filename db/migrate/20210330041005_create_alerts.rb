@@ -5,6 +5,7 @@ class CreateAlerts < ActiveRecord::Migration[6.1]
       t.string :errorSeverity
       t.string :errorCategory
       t.string :errorMessage
+      t.string :longMessage
       t.bigint :errorTime
       t.boolean :selected
       t.boolean :new

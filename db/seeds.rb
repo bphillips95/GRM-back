@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Alert.destroy_all
+Contact.destroy_all
+
+require 'json'
+alerts = JSON.parse(File.read('db/alerts.json'))
+alerts.each do |alert|
+  Alert.create(alert)
+end
+
+contacts = JSON.parse(File.read('db/contacts.json'))
+contacts.each do |contact|
+  Contact.create(contact)
+end
